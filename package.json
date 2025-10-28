@@ -14,8 +14,11 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "latest",
+    "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-label": "latest",
+    "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "latest",
+    "@radix-ui/react-tabs": "^1.1.13",
     "@vapi-ai/web": "^2.5.0",
     "@vercel/analytics": "latest",
     "class-variance-authority": "^0.7.1",
