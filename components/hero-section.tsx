@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Phone, Sparkles, Clock, Target, TrendingUp, Zap, Shield, CheckCircle, Play, X } from "lucide-react"
 import { useState, useEffect } from "react"
+import CalendarBooking from "@/components/CalendarBooking"
 
 export function HeroSection() {
   const [isCalOpen, setIsCalOpen] = useState(false)
