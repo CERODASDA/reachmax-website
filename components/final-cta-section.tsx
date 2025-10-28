@@ -129,19 +129,18 @@ Nachricht: Ich interessiere mich für ReachMax und möchte mehr erfahren.
               <p className="text-sm text-muted-foreground">Schnelle Antwort garantiert</p>
             </a>
 
-            {/* CAL.COM BOX */}
-            <a
-              href="https://app.cal.com/reachmax/30min?user=reachmax&overlayCalendar=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-6 bg-card border-2 border-border hover:border-[#FFD700] rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 text-center"
-            >
-              <div className="w-12 h-12 mx-auto mb-3 bg-[#FFD700]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFD700]/20 transition-colors">
-                <Calendar className="w-6 h-6 text-[#FFD700]" />
-              </div>
-              <h4 className="text-lg font-bold text-foreground mb-2">Cal.com</h4>
-              <p className="text-sm text-muted-foreground">Wunschtermin buchen</p>
-            </a>
+            {/* CALENDAR BOOKING BOX */}
+            <CalendarBooking
+              trigger={
+                <button className="group p-6 bg-card border-2 border-border hover:border-[#FFD700] rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 text-center w-full">
+                  <div className="w-12 h-12 mx-auto mb-3 bg-[#FFD700]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFD700]/20 transition-colors">
+                    <Calendar className="w-6 h-6 text-[#FFD700]" />
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground mb-2">Termin buchen</h4>
+                  <p className="text-sm text-muted-foreground">Wunschtermin buchen</p>
+                </button>
+              }
+            />
           </div>
         </div>
       </div>
