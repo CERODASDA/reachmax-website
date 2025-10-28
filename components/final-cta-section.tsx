@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Zap, Phone, CheckCircle2, MessageSquare, Calendar } from "lucide-react"
 import { useState } from "react"
+import CalendarBooking from "@/components/CalendarBooking"
 
 export function FinalCtaSection() {
   const [formData, setFormData] = useState({
