@@ -150,3 +150,47 @@ export const getVapiCalls = query({
     return calls.slice(0, limit);
   },
 });
+
+// Helper mutation to update appointment status (used by HTTP endpoints)
+export const updateAppointmentStatus = mutation({
+  args: {
+    appointmentId: v.string(),
+    status: v.string(),
+  },
+  handler: async (ctx, args) => {
+    // Parse the appointmentId as an Id type
+    const id = args.appointmentId as any;
+
+    // Update the appointment
+    await ctx.db.patch(id, {
+      status: args.status,
+    });
+
+    return id;
+  },
+});
+
+// Helper mutation to create lead (used by HTTP endpoints)
+export const createLead = mutation({
+  args: {
+    name: v.string(),
+    email: v.string(),
+    phone: v.optional(v.string()),
+    company: v.optional(v.string()),
+    message: v.optional(v.string()),
+    source: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const id = await ctx.db.insert("leads", {
+      name: args.name,
+      email: args.email,
+      phone: args.phone,
+      company: args.company,
+      message: args.message,
+      source: args.source,
+      createdAt: Date.now(),
+    });
+
+    return id;
+  },
+});
